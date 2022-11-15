@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import PublicLayout from './layouts/PublicLayout';
 import LandingPage from './pages/LandingPage'
 import OnsenListsPage from './pages/OnsenListsPage'
+import CheckOutPage from './pages/CheckOutPage'
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "/onsens",
         element: <OnsenListsPage />
+      },
+      {
+        path: "/checkOut",
+        element: <CheckOutPage />
       }
     ]
   }
