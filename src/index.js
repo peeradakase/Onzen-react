@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import PublicLayout from './layouts/PublicLayout';
 import LandingPage from './pages/LandingPage'
+import OnsenListsPage from './pages/OnsenListsPage'
 
 const router = createBrowserRouter([
   {
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/onsens",
-        element: <onsenListsPage />
+        element: <OnsenListsPage />
       }
     ]
   }
