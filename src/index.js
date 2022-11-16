@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -8,6 +9,12 @@ import PublicLayout from './layouts/PublicLayout';
 import LandingPage from './pages/LandingPage'
 import OnsenListsPage from './pages/OnsenListsPage'
 import CheckOutPage from './pages/CheckOutPage'
+import ConfirmationPage from './pages/Confirmation';
+import LogInPage from './pages/LogInPage';
+import SignUpPage from './pages/SignUpPage';
+import BookingHistoryPage from './pages/BookingHistoryPage';
+import AccountDetailsPage from './pages/AccountDetailsPage';
+
 
 const router = createBrowserRouter([
   {
@@ -15,7 +22,7 @@ const router = createBrowserRouter([
     element: <PublicLayout />,
     children: [
       {
-        path: "/LandingPage",
+        path: "/",
         element: <LandingPage />
       },
       {
@@ -25,6 +32,26 @@ const router = createBrowserRouter([
       {
         path: "/checkOut",
         element: <CheckOutPage />
+      },
+      {
+        path: "/Confirmation",
+        element: <ConfirmationPage />
+      },
+      {
+        path: "/LogIn",
+        element: <LogInPage />
+      },
+      {
+        path: "/SignUp",
+        element: <SignUpPage />
+      },
+      {
+        path: "/BookingHistory",
+        element: <BookingHistoryPage />
+      },
+      {
+        path: "/AccountDetails",
+        element: <AccountDetailsPage />
       }
     ]
   }

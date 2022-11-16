@@ -12,7 +12,9 @@ const CheckOutPage = ()=> {
       <div>
         <CheckOutPayment />
       </div>
-      <div></div>
+      <div>
+        <CheckOutContact />
+      </div>
     </div>
   )
 }

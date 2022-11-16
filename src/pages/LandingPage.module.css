@@ -13,12 +13,12 @@
 }
 
 .onsen-1 {
-  background-image: url("../../public/images/DSC5939_angle_second.jpeg");
+  background-image: url("../images/landing-onsen.jpeg");
   background-size: cover;
   height: 650px;
 }
 
-.btn-black {
+.btnBlack {
   background: #000;
   border: 1px solid #000;
   color: #fff;
@@ -60,3 +60,21 @@
 .text-center {
   text-align: center;
 }
+
+/* .btnblack {
+  background: #000;
+  border: 1px solid #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.btn {
+  font-size: 17px;
+  line-height: 1.2;
+  color: #fff;
+  padding: 16px 62px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin: 28px 0 0;
+  display: inline-block;
+} */
