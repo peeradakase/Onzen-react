@@ -1,7 +1,42 @@
-.header {
-  background-color: black;
-
+.m-t-30 {
+  margin-top: 30px;
 }
+
+.m-t-50 {
+  margin-top: 50px;
+}
+
+.m-b-10 {
+  margin-bottom: 10px;
+}
+
+.m-b-60 {
+  margin-bottom: 60px;
+}
+
+.m-b-50 {
+  margin-bottom: 50px;
+}
+
+.m-l-5 {
+  margin-left: 5px;
+}
+
+.m-l-30 {
+  margin-left: 30px;
+}
+
+.m-r-30 {
+  margin-right: 30px;
+}
+
+/* .header {
+  background-color: black;
+ padding-bottom: 20px;
+  padding-top: 20px;
+
+} */
+
 
 .sign-up-button {
   background: #8e7d4d;
@@ -19,27 +54,24 @@
   height: 650px;
 }
 
-.banner-sec-text h1 {
-  text-transform: uppercase;
-  letter-spacing: 18px;
-  margin: 0;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  line-height: 1.2;
-  color: #fff;
-  font-size: 100px;
-  padding-top: 84px;
-}
-
-.banner-sec-text h3 {
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  font-weight: 500;
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #fff;
-}
-
 .text-center {
   text-align: center;
+}
+
+.input-form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.general-button {
+  background-color: #000;
+  border: none;
+}
+
+.scroll-down-text {
+  border-bottom: 2px solid  rgb(182, 176, 176);
+  color: rgb(182, 176, 176);
+  margin-left: 140px;
+  margin-right: 140px;
+  margin-bottom: 80px;
 }

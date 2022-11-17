@@ -14,7 +14,7 @@ const OnsenListsPage = () => {
 
   return (
     <div className="onsen-lists-container">
-      <h5>SCROLL DOWN TO VIEW ALL EXPERIENCES</h5>
+      <h5 className="scroll-down-text text-center m-t-50">SCROLL DOWN TO VIEW ALL EXPERIENCES</h5>
       <div>
         {onsenElements}
       </div>

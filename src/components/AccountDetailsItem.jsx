@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import styles from './AccountDetailsItem.module.css';
 
 function AccountDetailsItem() {
   const [accountDetails, setAccountDetails] = useState({
@@ -20,9 +19,9 @@ function AccountDetailsItem() {
   }
 
   return (
-    <div className={styles.inputAccountDetails}>
-      <h1>Account Details</h1>
-      <form>
+    <div className="input-form">
+      <h1 className="text-center m-t-30">Account Details</h1>
+      <form className="m-t-30">
 
         <div className="form-floating mb-3">
           <input
@@ -50,14 +49,25 @@ function AccountDetailsItem() {
           <label for="email-input">Email</label>
         </div>
 
+        <div className="form-floating mb-3">
           <input
             type="text"
+            class="form-control"
+            id="phoneNumber-input"
             name="phoneNumber"
             value={accountDetails.phoneNumber}
             placeholder="PhoneNumber"
             onChange={onAccountDetailsChange}
           />
-        <button type="submit">Update My Details</button>
+          <label for="phoneNumber-input">Phone Number</label>
+        </div>
+        <div className="d-grid gap-2 col-6 mx-auto">
+          <button
+            className="general-button btn btn-primary mb-3 m-t-30"
+            type="submit">
+            Update My Details
+          </button>
+        </div>
       </form>
     </div>
 

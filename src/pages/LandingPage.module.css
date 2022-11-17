@@ -2,6 +2,7 @@
   background-color: black;
 }
 
+
 .sign-up-button {
   background: #8e7d4d;
   border: 1px solid #8e7d4d;
@@ -10,6 +11,16 @@
   padding: 16px 20px;
     text-transform: uppercase;
     letter-spacing: 3px;
+}
+
+a {
+  color:darkgrey;
+  text-decoration: none;
+}
+
+a:hover {
+  color:rgb(246, 235, 235);
+  text-decoration: none;
 }
 
 .onsen-1 {
@@ -22,7 +33,7 @@
   background: #000;
   border: 1px solid #000;
   color: #fff;
-  border-color: #000;
+  border-color: rgb(235, 229, 229);
 }
 
 .btn {
@@ -36,23 +47,29 @@
   display: inline-block;
 }
 
-.banner-sec-text h1 {
+.bannerSecTextH1 {
   text-transform: uppercase;
-  letter-spacing: 18px;
+  letter-spacing: 22px;
   margin: 0;
-  margin-top: 40px;
+  margin-left: auto;
+   margin-right:  auto;
+   text-align: center;
+   width: 597px;
   margin-bottom: 20px;
   line-height: 1.2;
   color: #fff;
-  font-size: 100px;
-  padding-top: 84px;
+  font-size: 120px;
+  padding-top: 124px;
+  font-family: 'DM Serif Display', serif;
+  border-bottom: 1px solid rgb(246, 235, 235);
+
 }
 
-.banner-sec-text h3 {
+.bannerSecTextH3 {
   text-transform: uppercase;
-  letter-spacing: 5px;
+  letter-spacing: 10px;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 18px;
   margin-bottom: 20px;
   color: #fff;
 }
@@ -60,21 +77,3 @@
 .text-center {
   text-align: center;
 }
-
-/* .btnblack {
-  background: #000;
-  border: 1px solid #000;
-  color: #fff;
-  border-color: #000;
-}
-
-.btn {
-  font-size: 17px;
-  line-height: 1.2;
-  color: #fff;
-  padding: 16px 62px;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  margin: 28px 0 0;
-  display: inline-block;
-} */
