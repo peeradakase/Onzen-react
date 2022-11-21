@@ -26,7 +26,9 @@
     "body-parser": "^1.20.1",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "nodemon": "^2.0.20"
+    "iron-session": "^6.3.1",
+    "nodemon": "^2.0.20",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "prisma": "^4.6.1"
