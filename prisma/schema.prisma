@@ -19,7 +19,7 @@ model User {
   createdAt   DateTime @default(now())
   updateAt    DateTime @updatedAt
 
-  // orders Order[]
+  orders Order[]
 }
 
 model Order {
@@ -33,7 +33,7 @@ model Order {
   updatedAt     DateTime  @updatedAt
   Status	  String
   //Order belong to a onzen
-  onzen        Onzen @relation(fields: [onzenId], references: [id])
+  onzen        Onsen @relation(fields: [onzenId], references: [id])
   onzenId      Int
 
   //Order belong to a User
@@ -42,10 +42,10 @@ model Order {
 }
 
 
-model Onzen {
+model Onsen {
   id            Int        @id @default(autoincrement())
   name          String
-  price         Int
+  price         String
   createdAt     DateTime   @default(now())
   updateAt      DateTime   @updatedAt
   policy        String
@@ -63,6 +63,6 @@ model Image {
   updatedAt    DateTime  @updatedAt
 
   //Image belong to a onzen
-  onzen      Onzen @relation(fields: [onzenId], references: [id])
+  onzen      Onsen @relation(fields: [onzenId], references: [id])
   onzenId    Int
 }
