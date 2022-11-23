@@ -10,7 +10,7 @@ const PublicLayout = () => {
     <UserContext.Provider value={user}>
       <SetUserContext.Provider value={setUser}>
         <div className={styles.logoCenter}>
-      <header className={styles.header}>
+        <header className={styles.header}>
         <div className={styles.onsenLogo}>
         <img src={logo} alt="logo" />
         <Link to={`signup`}>Signup</Link>

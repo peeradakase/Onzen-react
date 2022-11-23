@@ -4,7 +4,6 @@ import { SetUserContext, UserContext } from "../contexts/UserContext.js";
 import SignUpForm from '../components/SignUpForm';
 
 function SignUpPage() {
-  const userData = useContext(UserContext);
   const setUser = useContext(SetUserContext);
   const navigate = useNavigate();
 

@@ -21,3 +21,48 @@ model User {
 
   // orders Order[]
 }
+
+model Order {
+  id            Int       @id  @default(autoincrement())
+  bookingDate   DateTime
+  payment       String
+  adult 	  Int
+  children      Int
+  total         Int
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  Status	  String
+  //Order belong to a onzen
+  onzen        Onzen @relation(fields: [onzenId], references: [id])
+  onzenId      Int
+
+  //Order belong to a User
+  user          User   @relation(fields: [userId], references: [id])
+  userId        Int
+}
+
+
+model Onzen {
+  id            Int        @id @default(autoincrement())
+  name          String
+  price         Int
+  createdAt     DateTime   @default(now())
+  updateAt      DateTime   @updatedAt
+  policy        String
+  about		 String
+
+
+  images        Image[]
+  orders        Order[]
+}
+
+model Image {
+  id           Int      @id @default(autoincrement())
+  url          String
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  //Image belong to a onzen
+  onzen      Onzen @relation(fields: [onzenId], references: [id])
+  onzenId    Int
+}

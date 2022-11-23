@@ -24,6 +24,7 @@ app.use(cors());
 app.use('/',router);
 
 
+
 app.listen(port, () => {
   console.log(`Application started at port ${port}`);
 });
