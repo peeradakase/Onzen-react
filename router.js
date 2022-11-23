@@ -7,6 +7,6 @@ const api = 'api';
 
 //ทำcall backเตรียมเอาใส่controller
  //url ,callback
-router.post(`/${api}/auth/signup` ,SignupController)
+router.post(`/${api}/auth/signup`,SignupController)
 router.post(`/${api}/auth/login`,LoginController)
 export default router;

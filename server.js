@@ -1,6 +1,7 @@
 import * as dotenv from 'dotenv';
 dotenv.config();
 import express from 'express';
+import cors from 'cors'
 import bodyParser from 'body-parser';
 import router from './router.js';
 import { ironSession} from 'iron-session/express'
@@ -19,7 +20,7 @@ app.use(ironSession({
     sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax'
   }
 }))
-
+app.use(cors());
 app.use('/',router);
 
 
