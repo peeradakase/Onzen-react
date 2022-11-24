@@ -31,7 +31,7 @@ const PublicLayout = () => {
           </header>
 
           <Outlet />
-          <footer>This is footer</footer>
+
         </div>
       </SetUserContext.Provider>
     </UserContext.Provider>

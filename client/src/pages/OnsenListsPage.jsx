@@ -12,7 +12,7 @@ const OnsenListsPage = () => {
     return <OnsenItems key={onsen.id} onsen={onsen} />;
   });
 
-  // req onsen data from api
+  // 1.req onsen data from api
   const fetchOnsenData = async () => {
     try {
       const { data } = await axios.get(`${apiUrl}/api/onsens`, requestHeader);
@@ -21,7 +21,6 @@ const OnsenListsPage = () => {
       alert('Error get onsens');
     }
   }
-
   useEffect(() => {
     fetchOnsenData();
   },[])

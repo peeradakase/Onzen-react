@@ -42,12 +42,32 @@
   margin-left: 30px;
 }
 
+.m-l-150 {
+  margin-left: 150px;
+}
+
+.m-l-280 {
+  margin-left: 280px;
+}
+
 .m-r-30 {
   margin-right: 30px;
 }
 
+.p-l-40 {
+  padding-left: 40px;
+}
+
+.p-r-40 {
+  padding-right: 40px;
+}
+
 img {
   max-width: 100%;
+}
+
+.font-size-20 {
+  font-size: 20px;
 }
 
 .sign-up-button {

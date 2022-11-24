@@ -1,10 +1,14 @@
+import { Link } from "react-router-dom";
+import Button from 'react-bootstrap/Button';
+
+
 function BookingHistoryItems() {
 
   return (
     <div className="m-l-30 m-r-30">
 
-      <div class="table-responsive">
-        <table class="table align-middle">
+      <div className="table-responsive">
+        <table className="table align-middle">
           <tbody>
 
             <tr>
@@ -34,6 +38,7 @@ function BookingHistoryItems() {
           </tbody>
         </table>
       </div>
+
     </div>
   )
 }

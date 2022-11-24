@@ -15,12 +15,12 @@ function OnsenItems(props) {
     }
 
     if (selectedContent === 'pricing') {
-      return <div dangerouslySetInnerHTML={{ __html: onsen.pricing }} />
+      return <div dangerouslySetInnerHTML={{ __html: onsen.price }} />
 
     }
 
     if (selectedContent === 'policies') {
-      return <div dangerouslySetInnerHTML={{ __html: onsen.policies }} />
+      return <div dangerouslySetInnerHTML={{ __html: onsen.policy }} />
 
     }
   }
@@ -36,7 +36,7 @@ function OnsenItems(props) {
       </div>
 
       <div className='col-6'>
-        <h1>{onsen.title}</h1>
+        <h1>{onsen.name}</h1>
         <img
           className={styles.signalImage}
           src={Signals} alt="signals" />
@@ -67,7 +67,7 @@ function OnsenItems(props) {
           {showOnsenContent()}
 
           <Link
-            to={`CHECK AVAILABILITY`}>
+            to="/booking">
             <div className="btn btn-dark m-b-150">
               CHECK AVAILABILITY
             </div>
