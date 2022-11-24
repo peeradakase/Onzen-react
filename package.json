@@ -6,11 +6,12 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run install:client && npm run build:client && node server.js",
+    "start": "node server.js",
     "start:watch": "nodemon ./server.js",
     "prisma:migrate:dev": "npx prisma migrate dev",
     "install:client": "npm i --prefix ./client",
-    "build:client": "npm run build --prefix ./client"
+    "build:client": "npm run build --prefix ./client",
+    "postinstall": "npx prisma generate"
   },
   "repository": {
     "type": "git",
