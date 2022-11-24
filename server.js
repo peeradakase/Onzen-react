@@ -21,8 +21,10 @@ app.use(ironSession({
   }
 }))
 app.use(cors());
-app.use('/',router);
 
+app.use(express.static("client/build"));
+
+app.use('/',router);
 
 
 app.listen(port, () => {

@@ -15,8 +15,10 @@ const OnsenListsPage = () => {
   // 1.req onsen data from api
   const fetchOnsenData = async () => {
     try {
-      const { data } = await axios.get(`${apiUrl}/api/onsens`, requestHeader);
-      setOnsens(data)
+      const { data } = await axios.get(`${apiUrl || ''}/api/onsens`, requestHeader);
+      if (data) {
+        setOnsens(data)
+      }
     } catch (error) {
       alert('Error get onsens');
     }

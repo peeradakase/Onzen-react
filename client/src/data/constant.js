@@ -32,17 +32,3 @@ export const bookingTimeSlot = [
     isActive: false
   },
 ]
-
-
-
-
-
-
-
-
-
-
-
-
-
-1
