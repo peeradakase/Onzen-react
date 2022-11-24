@@ -1,8 +1,7 @@
-import { Navigate } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import LogInForm from '../components/LogInForm'
-import { SetUserContext, UserContext } from '../contexts/UserContext.js';
+import { SetUserContext } from '../contexts/UserContext.js';
 
 function LogInPage() {
   const setUser = useContext(SetUserContext);

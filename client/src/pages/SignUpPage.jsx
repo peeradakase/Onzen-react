@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { SetUserContext, UserContext } from "../contexts/UserContext.js";
+import { SetUserContext } from "../contexts/UserContext.js";
 import SignUpForm from '../components/SignUpForm';
 
 function SignUpPage() {
