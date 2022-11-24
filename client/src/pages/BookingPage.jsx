@@ -2,6 +2,7 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import { useState } from 'react';
 import { bookingTimeSlot } from '../data/constant.js';
+import styles from './Booking.module.css';
 
 const BookingPage = () => {
   const [bookingData, setBookingDate] = useState(new Date());
@@ -19,33 +20,37 @@ const BookingPage = () => {
     setTimeSlot(updateTimeSlot);
   }
   return (
-      <div>
-        <h1 className="text-center">Booking Page</h1>
+    <div className={`${styles.container}`}>
+      <h1 className="text-center m-b-60 m-t-30">Booking Page</h1>
         <div className="row">
           {/* Calendar for choosing date */}
+
           <div className="col-md-6">
-            <Calendar value={bookingData} onChange={setBookingDate} />
+          <div className="item-center">
+          <Calendar minDate={new Date()} value={bookingData} onChange={setBookingDate} />
+          </div>
           </div>
 
+
           {/* time slot */}
-          <div className="col-md-6">
-            <ul>
+        <div className="col-md-6 m-b-10">
+          <div className={`${styles.listStyleNone} row`}>
               {timeSlot.map((slot, index) => {
                 return (
-                  <li key={`slot-${index}`}>
+                  <div className="col-4 m-b-20" key={`slot-${index}`}>
                     <button
-                      className={`btn btn-${slot.isActive ? 'danger':'light'}`}
+                      className={`m-l-15 btn btn-${slot.isActive ? 'danger' : 'light'} ${styles.timeSlotButton}`}
                       onClick={() => {
                         onSlotClick(index)
                       }}
                     >
                       {slot.label}
                     </button>
-                  </li>
+                  </div>
                 )
               })}
               <li></li>
-            </ul>
+            </div>
           </div>
         </div>
       </div>

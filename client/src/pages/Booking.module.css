@@ -1,0 +1,14 @@
+.container {
+  width: 80%;
+  margin-left: 134px;
+}
+
+.timeSlotButton {
+  width: 166px;
+  height: 60px;
+  font-size: 18px;
+}
+
+.listStyleNone {
+  list-style: none;
+}
