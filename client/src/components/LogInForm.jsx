@@ -30,7 +30,7 @@ function LogInForm(props) {
     try {
       setIsLoading(true);
       const { data } = await axios.post(
-        `${apiUrl}/api/auth/login`,
+        `${apiUrl || ''}/api/auth/login`,
         values,
         requestHeader
       );

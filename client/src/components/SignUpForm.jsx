@@ -37,7 +37,7 @@ function SignUpForm(props) {
     try {
       setIsLoading(true);
       const { data } = await axios.post(
-        `${apiUrl}/api/auth/signup`,
+        `${apiUrl || ''}/api/auth/signup`,
         values,
         requestHeader
       );
