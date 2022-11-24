@@ -14,6 +14,7 @@ import LogInPage from './pages/LogInPage';
 import SignUpPage from './pages/SignUpPage';
 import BookingHistoryPage from './pages/BookingHistoryPage';
 import AccountDetailsPage from './pages/AccountDetailsPage';
+import BookingPage from './pages/BookingPage';
 
 
 const router = createBrowserRouter([
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "/onsens",
         element: <OnsenListsPage />
+      },
+      {
+        path: "/booking",
+        element: <BookingPage />
       },
       {
         path: "/checkOut",

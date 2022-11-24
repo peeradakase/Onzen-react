@@ -10,15 +10,28 @@ const PublicLayout = () => {
     <UserContext.Provider value={user}>
       <SetUserContext.Provider value={setUser}>
         <div className={styles.logoCenter}>
-        <header className={styles.header}>
-        <div className={styles.onsenLogo}>
-        <img src={logo} alt="logo" />
-        <Link to={`signup`}>Signup</Link>
-      </div>
-      </header>
 
-      <Outlet />
-      <footer>This is footer</footer>
+          <header className={styles.header}>
+
+              <div className="row">
+
+                <div className="col-4"></div>
+
+              <div className="text-center col-4">
+                  <Link to="/">
+                    <img src={logo} alt="logo" />
+                  </Link>
+                </div>
+
+              <div className="col-4 text-center m-t-20">
+                  <Link to={`signup`}>Signup</Link>
+                </div>
+              </div>
+
+          </header>
+
+          <Outlet />
+          <footer>This is footer</footer>
         </div>
       </SetUserContext.Provider>
     </UserContext.Provider>

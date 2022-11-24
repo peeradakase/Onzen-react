@@ -6,21 +6,21 @@ import styles from './OnsenItems.module.css';
 function OnsenItems(props) {
   const [selectedContent, setSelectedContent] = useState('about');
 
-  const { onsenData } = props;
+  const { onsen } = props;
 
   const showOnsenContent = () => {
     if (selectedContent === 'about') {
-      return <div dangerouslySetInnerHTML={{ __html: onsenData.about }} />
+      return <div dangerouslySetInnerHTML={{ __html: onsen.about }} />
 
     }
 
     if (selectedContent === 'pricing') {
-      return <div dangerouslySetInnerHTML={{ __html: onsenData.pricing }} />
+      return <div dangerouslySetInnerHTML={{ __html: onsen.pricing }} />
 
     }
 
     if (selectedContent === 'policies') {
-      return <div dangerouslySetInnerHTML={{ __html: onsenData.policies }} />
+      return <div dangerouslySetInnerHTML={{ __html: onsen.policies }} />
 
     }
   }
@@ -28,13 +28,15 @@ function OnsenItems(props) {
   return (
     <div className='row m-l-30 m-r-30 '>
       <div className='col-6'>
-        <img
-          className={styles.onsenImage}
-          src={onsenData.thumbnailUrl} />
+        <div>
+          {onsen.images.map(image => {
+            return  <img key={image} src={image.url} alt="" />
+          })}
+        </div>
       </div>
 
       <div className='col-6'>
-        <h1>{onsenData.title}</h1>
+        <h1>{onsen.title}</h1>
         <img
           className={styles.signalImage}
           src={Signals} alt="signals" />
@@ -65,9 +67,8 @@ function OnsenItems(props) {
           {showOnsenContent()}
 
           <Link
-
             to={`CHECK AVAILABILITY`}>
-            <div className="btn btn-dark">
+            <div className="btn btn-dark m-b-150">
               CHECK AVAILABILITY
             </div>
           </Link>

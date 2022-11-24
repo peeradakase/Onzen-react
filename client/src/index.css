@@ -1,3 +1,7 @@
+.m-t-20 {
+  margin-top: 20px;
+}
+
 .m-t-30 {
   margin-top: 30px;
 }
@@ -18,6 +22,10 @@
   margin-bottom: 50px;
 }
 
+.m-b-150 {
+  margin-bottom: 150px;
+}
+
 .m-l-5 {
   margin-left: 5px;
 }
@@ -30,13 +38,9 @@
   margin-right: 30px;
 }
 
-/* .header {
-  background-color: black;
- padding-bottom: 20px;
-  padding-top: 20px;
-
-} */
-
+img {
+  max-width: 100%;
+}
 
 .sign-up-button {
   background: #8e7d4d;

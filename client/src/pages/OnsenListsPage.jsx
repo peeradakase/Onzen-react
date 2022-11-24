@@ -1,16 +1,30 @@
-import { onsensData } from '../data/onsens-data';
+import { useEffect, useState } from "react";
+import axios from 'axios';
 import OnsenItems from '../components/OnsenItems';
-
+import { apiUrl, requestHeader } from "../data/constant.js";
 
 const OnsenListsPage = () => {
 
+  const [onsens, setOnsens] = useState([]);
+
   //เก็บลูก
-  const onsenElements = onsensData.map((onsenData, index) => {
-    return <OnsenItems key={index} onsenData={onsenData} />;
+  const onsenElements = onsens.map((onsen) => {
+    return <OnsenItems key={onsen.id} onsen={onsen} />;
   });
 
+  // req onsen data from api
+  const fetchOnsenData = async () => {
+    try {
+      const { data } = await axios.get(`${apiUrl}/api/onsens`, requestHeader);
+      setOnsens(data)
+    } catch (error) {
+      alert('Error get onsens');
+    }
+  }
 
-
+  useEffect(() => {
+    fetchOnsenData();
+  },[])
 
   return (
     <div className="onsen-lists-container">
