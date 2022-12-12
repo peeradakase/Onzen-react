@@ -21,7 +21,7 @@ CREATE TABLE "Order" (
     "total" INTEGER NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL,
-    "Status" TEXT NOT NULL,
+    "status" TEXT NOT NULL,
     "onzenId" INTEGER NOT NULL,
     "userId" INTEGER NOT NULL,
 
@@ -52,8 +52,25 @@ CREATE TABLE "Image" (
     CONSTRAINT "Image_pkey" PRIMARY KEY ("id")
 );
 
+-- CreateTable
+CREATE TABLE "Admin" (
+    "id" SERIAL NOT NULL,
+    "name" TEXT NOT NULL,
+    "email" TEXT NOT NULL,
+    "phoneNumber" TEXT NOT NULL,
+    "password" TEXT NOT NULL,
+    "role" TEXT NOT NULL,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
+
+    CONSTRAINT "Admin_pkey" PRIMARY KEY ("id")
+);
+
 -- CreateIndex
 CREATE UNIQUE INDEX "User_email_key" ON "User"("email");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "Admin_email_key" ON "Admin"("email");
 
 -- AddForeignKey
 ALTER TABLE "Order" ADD CONSTRAINT "Order_onzenId_fkey" FOREIGN KEY ("onzenId") REFERENCES "Onsen"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
