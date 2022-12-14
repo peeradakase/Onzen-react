@@ -1,7 +1,7 @@
 import yup from 'yup';
 import bcrypt from 'bcrypt';
-import { handleErrors } from '../../../helpers/haddle-error.js'
-import { prismaClient } from '../../../helpers/prisma-client.js';
+import { prismaClient } from '../../../../helpers/prisma-client.js';
+import { handleErrors } from '../../../../helpers/haddle-error.js';
 
 //Criteria of Validation
 const loginSchema = yup.object({

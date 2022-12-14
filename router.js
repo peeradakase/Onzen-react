@@ -5,6 +5,9 @@ import { dirname } from 'path';
 import { SignupController } from './src/controllers/api/auth/signup.js';
 import { LoginController } from './src/controllers/api/auth/login.js'
 import { OnsenListsController } from './src/controllers/api/onsens/index.js'
+import { AdminLoginController } from './src/controllers/api/admin/auth/admin-login.js';
+import { AdminSignupController } from './src/controllers/api/admin/auth/admin-signup.js';
+import { ListOnsensController } from './src/controllers/api/admin/onsens/index.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -16,6 +19,18 @@ const api = 'api';
 router.post(`/${api}/auth/signup`,SignupController)
 router.post(`/${api}/auth/login`,LoginController)
 router.get(`/${api}/onsens`, OnsenListsController)
+
+// Admin API
+const apiAdminRoute = `/${api}/admin`
+// /api/admin/auth/login
+router.get(`${apiAdminRoute}/auth/login`, AdminLoginController);
+// /api/admin/auth/logout
+router.get(`${apiAdminRoute}/auth/logout`, AdminSignupController);
+
+// Onsen API
+// /api/admin/onsens
+router.get(`${apiAdminRoute}/onsens`, ListOnsensController);
+
 
 router.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client", "build", "index.html"));
