@@ -8,6 +8,7 @@ import { OnsenListsController } from './src/controllers/api/onsens/index.js'
 import { AdminLoginController } from './src/controllers/api/admin/auth/admin-login.js';
 import { AdminSignupController } from './src/controllers/api/admin/auth/admin-signup.js';
 import { ListOnsensController } from './src/controllers/api/admin/onsens/index.js';
+import { ListTeamsController } from './src/controllers/api/admin/teams/index.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -30,6 +31,9 @@ router.get(`${apiAdminRoute}/auth/logout`, AdminSignupController);
 // Onsen API
 // /api/admin/onsens
 router.get(`${apiAdminRoute}/onsens`, ListOnsensController);
+
+// Team API
+router.get(`${apiAdminRoute}/teams`, ListTeamsController);
 
 
 router.get("*", (req, res) => {
