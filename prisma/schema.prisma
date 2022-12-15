@@ -49,6 +49,7 @@ model Onsen {
   updateAt  DateTime @updatedAt
   policy    String
   about     String
+  deposit   Int
 
   images Image[]
   orders Order[]

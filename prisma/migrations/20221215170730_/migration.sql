@@ -37,6 +37,7 @@ CREATE TABLE "Onsen" (
     "updateAt" TIMESTAMP(3) NOT NULL,
     "policy" TEXT NOT NULL,
     "about" TEXT NOT NULL,
+    "deposit" INTEGER NOT NULL,
 
     CONSTRAINT "Onsen_pkey" PRIMARY KEY ("id")
 );

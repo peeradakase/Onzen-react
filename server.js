@@ -23,6 +23,7 @@ app.use(ironSession({
 app.use(cors());
 
 app.use(express.static("client/build"));
+app.use(express.static("public"));
 
 app.use('/',router);
 
