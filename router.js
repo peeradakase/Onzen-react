@@ -11,6 +11,7 @@ import { ListOnsensController } from './src/controllers/api/admin/onsens/index.j
 import { ListTeamsController } from './src/controllers/api/admin/teams/index.js';
 import { CreateOnsenController } from './src/controllers/api/admin/onsens/create.js';
 import { imageUploader } from './src/middlewares/uploader.js';
+import { UpdateOnsenController } from './src/controllers/api/admin/onsens/update.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -34,6 +35,7 @@ router.get(`${apiAdminRoute}/auth/logout`, AdminSignupController);
 // /api/admin/onsens
 router.get(`${apiAdminRoute}/onsens`, ListOnsensController);
 router.post(`${apiAdminRoute}/onsens`, imageUploader.single('image'), CreateOnsenController);
+router.put(`${apiAdminRoute}/onsens/:id`, imageUploader.single('image'), UpdateOnsenController);
 
 // Team API
 router.get(`${apiAdminRoute}/teams`, ListTeamsController);

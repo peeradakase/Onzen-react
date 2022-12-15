@@ -4,9 +4,6 @@ import { uploadImagePath } from "../../../../middlewares/uploader.js";
 
 export const CreateOnsenController = async (req, res) => {
   try {
-    console.log(req.file);
-    console.log(req.body.name);
-
     const { name, price, policy, about, deposit } = req.body;
     const onsenData = {
       name,
