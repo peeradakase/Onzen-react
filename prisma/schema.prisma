@@ -62,7 +62,7 @@ model Image {
   updatedAt DateTime @updatedAt
 
   //Image belong to a onzen
-  onzen   Onsen @relation(fields: [onzenId], references: [id])
+  onzen   Onsen @relation(fields: [onzenId], references: [id], onDelete: Cascade)
   onzenId Int
 }
 

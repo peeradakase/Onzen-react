@@ -4,7 +4,7 @@ import { uploadImagePath } from "../../../../middlewares/uploader.js";
 
 export const UpdateOnsenController = async (req, res) => {
   try {
-    const onsenId = req.params.id;
+    const onsenId = parseInt(req.params.id);
     const { name, price, policy, about, deposit } = req.body;
     const onsenData = {};
 
@@ -43,9 +43,7 @@ export const UpdateOnsenController = async (req, res) => {
       {
         where: {
           id: onsenId
-        }
-      },
-      {
+        },
         data: updateData
       }
     );
