@@ -16,6 +16,10 @@ import { ShowOnsenController } from './src/controllers/api/admin/onsens/show.js'
 import { DeleteOnsenController } from './src/controllers/api/admin/onsens/delete.js';
 import { ShowTeamController } from './src/controllers/api/admin/teams/show.js';
 import { CreateTeamController } from './src/controllers/api/admin/teams/create.js';
+import { UpdateAdminController } from './src/controllers/api/admin/teams/update.js';
+import { DeleteAdminController } from './src/controllers/api/admin/teams/delete.js';
+import { ShowUserController } from './src/controllers/api/admin/users/show.js';
+import { ListUsersController } from './src/controllers/api/admin/users/index.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -44,9 +48,18 @@ router.put(`${apiAdminRoute}/onsens/:id`, imageUploader.single('image'), UpdateO
 router.delete(`${apiAdminRoute}/onsens/:id`, DeleteOnsenController)
 
 // Team API
-router.get(`${apiAdminRoute}/teams/:id`, ShowTeamController);
 router.get(`${apiAdminRoute}/teams`, ListTeamsController);
 router.post(`${apiAdminRoute}/teams`, imageUploader.single('avatar'), CreateTeamController);
+router.delete(`${apiAdminRoute}/teams/:id`, DeleteAdminController);
+
+
+// Admin Profile API
+router.get(`${apiAdminRoute}/my/profile/:id`, ShowTeamController);
+router.put(`${apiAdminRoute}/my/profile`, imageUploader.single('avatar'), UpdateAdminController);
+
+// Clients API
+router.get(`${apiAdminRoute}/clients/:id`, ShowUserController);
+router.get(`${apiAdminRoute}/clients`, ListUsersController);
 
 router.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client", "build", "index.html"));

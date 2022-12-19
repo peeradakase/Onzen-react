@@ -6,7 +6,6 @@ import { uploadImagePath } from '../../../../middlewares/uploader.js';
 export const CreateTeamController = async (req, res) => {
   try {
     const { name, email, phoneNumber, password, role } = req.body;
-    console.log(password, ' :password');
     const adminData = {
       name,
       email,
