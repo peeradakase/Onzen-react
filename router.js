@@ -48,8 +48,6 @@ router.get(`${apiAdminRoute}/teams/:id`, ShowTeamController);
 router.get(`${apiAdminRoute}/teams`, ListTeamsController);
 router.post(`${apiAdminRoute}/teams`, imageUploader.single('avatar'), CreateTeamController);
 
-
-
 router.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
