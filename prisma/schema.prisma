@@ -61,7 +61,7 @@ model Image {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  //Image belong to a onzen
+  // Image belong to a onzen
   onzen   Onsen @relation(fields: [onzenId], references: [id], onDelete: Cascade)
   onzenId Int
 }
@@ -73,6 +73,8 @@ model Admin {
   phoneNumber String
   password    String
   role        String
+  avatar      String
+
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }

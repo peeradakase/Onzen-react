@@ -3,7 +3,6 @@ import yup from 'yup';
 import { handleErrors } from '../../../../helpers/haddle-error.js'
 import { prismaClient } from '../../../../helpers/prisma-client.js'
 
-
 //Criteria use for Validation by using Yep
 const signupSchema  = yup.object({
   email:  yup.string().email().required().test({
