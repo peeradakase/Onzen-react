@@ -14,6 +14,7 @@ import SignUpPage from './pages/SignUpPage';
 import BookingHistoryPage from './pages/BookingHistoryPage';
 import AccountDetailsPage from './pages/AccountDetailsPage';
 import BookingPage from './pages/BookingPage';
+import TeamPage from './pages/TeamPage';
 
 
 const router = createBrowserRouter([
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
         element: <AccountDetailsPage />
       }
     ]
+  },
+  {
+    path: "/admin/teams",
+    element: <TeamPage />
   }
 ])
 

@@ -112,3 +112,8 @@ img {
   display: flex;
   justify-content:center;
 }
+
+
+.max-width-80 {
+  max-width: 80px;
+}
