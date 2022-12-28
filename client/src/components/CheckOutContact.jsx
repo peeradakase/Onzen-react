@@ -28,26 +28,26 @@ function CheckOutContact() {
         <div className="form-floating mb-3 m-t-50 ">
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="name-input"
             name="name"
             value={contact.name}
             placeholder="Name"
             onChange={onContactChange}
           />
-          <label for="name-input">Name</label>
+          <label htmlFor="name-input">Name</label>
         </div>
         <div className="form-floating mb-3">
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="phone-number-input"
             name="phoneNumber"
             value={contact.phoneNumber}
             placeholder="Phone number"
             onChange={onContactChange}
           />
-          <label for="name-input">Phone number</label>
+          <label htmlFor="name-input">Phone number</label>
         </div>
         <div className="d-grid gap-2 col-6 mx-auto">
           <Link

@@ -2,7 +2,7 @@ import { apiUrl } from "../data/constant";
 import Pagination from "./Pagination";
 
 const TeamTable = (props) => {
-  const { teams, pagination, onPageChange } = props;
+  const { teams, pagination, onPageChange, onTeamDelete } = props;
 
   const pageCount = pagination ? Math.ceil(pagination.total / pagination.limit) : 0;
 
@@ -49,7 +49,13 @@ const TeamTable = (props) => {
                 <td>{admin.phoneNumber}</td>
                 <td>{admin.role}</td>
                 <td>
-                  <button className="btn btn-danger">
+                  {/* 1. Delete Button (of each row) is clicked */}
+                  <button 
+                    className="btn btn-danger" 
+                    onClick={() => {
+                      onTeamDelete(admin.id)
+                    }}
+                  >
                     Delete
                   </button>
                 </td>

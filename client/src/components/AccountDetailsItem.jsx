@@ -26,40 +26,40 @@ function AccountDetailsItem() {
         <div className="form-floating mb-3">
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="name-input"
             name="name"
             value={accountDetails.name}
             placeholder="Name"
             onChange={onAccountDetailsChange}
           />
-          <label for="name-input">Name</label>
+          <label htmlFor="name-input">Name</label>
         </div>
 
         <div className="form-floating mb-3">
           <input
             type="email"
-            class="form-control"
+            className="form-control"
             id="email-input"
             name="email"
             value={accountDetails.email}
             placeholder="Email"
             onChange={onAccountDetailsChange}
           />
-          <label for="email-input">Email</label>
+          <label htmlFor="email-input">Email</label>
         </div>
 
         <div className="form-floating mb-3">
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="phoneNumber-input"
             name="phoneNumber"
             value={accountDetails.phoneNumber}
             placeholder="PhoneNumber"
             onChange={onAccountDetailsChange}
           />
-          <label for="phoneNumber-input">Phone Number</label>
+          <label htmlFor="phoneNumber-input">Phone Number</label>
         </div>
         <div className="d-grid gap-2 col-6 mx-auto">
           <button

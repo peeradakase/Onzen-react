@@ -41,7 +41,7 @@ function OnsenItems(props) {
           className={styles.signalImage}
           src={Signals} alt="signals" />
 
-        <div class="m-b-60">
+        <div className="m-b-60">
 
           <button
             className="btn btn-outline-secondary m-b-10"

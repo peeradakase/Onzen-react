@@ -11,21 +11,21 @@ function CheckOutPayment() {
           <div className="form-check m-t-20">
             <input className="form-check-input" type="radio" name="payment" id="bank-transfer" value={selectedPayment}
               onChange={(event) => { setSelectedPayment(event.target.value) }} />
-            <label for="bank-transfer">
+            <label htmlFor="bank-transfer">
               Bank Transfer
             </label>
           </div>
           <div className="form-check">
             <input className="form-check-input" type="radio" name="payment" id="paypal" value={selectedPayment}
               onChange={(event) => { setSelectedPayment(event.target.value) }} />
-            <label for="paypal">
+            <label htmlFor="paypal">
               PayPal
             </label>
           </div>
           <div className="form-check">
             <input className="form-check-input" type="radio" name="payment" id="credit-card" value={selectedPayment}
               onChange={(event) => { setSelectedPayment(event.target.value) }} />
-            <label for="credit-card">
+            <label htmlFor="credit-card">
               Credit Card
             </label>
           </div>
