@@ -12,7 +12,7 @@ const CreateAdminPage = () => {
   const onCreateAdminRequest = async (adminData, setErrors) => {
     try {
       setIsFormLoading(true);
-      const { data } = await axios.post(
+      await axios.post(
         `${apiUrl}/api/admin/teams`,
         adminData,
         requestHeaderFormData

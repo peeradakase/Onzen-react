@@ -20,7 +20,6 @@ export default function TeamPage() {
   }
 
   const onPageChange = async (pageNumber) => {
-    await getTeamData(pageNumber);
     setCurrentPage(pageNumber);
   }
 
