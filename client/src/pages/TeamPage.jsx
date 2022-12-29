@@ -41,7 +41,7 @@ export default function TeamPage() {
   useEffect(() => {
     // Call Ajax
     getTeamData(currentPage);
-  }, []);
+  }, [currentPage]);
 
   return (
     <div className="container m-t-30">
