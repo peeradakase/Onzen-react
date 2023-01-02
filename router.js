@@ -50,6 +50,7 @@ router.delete(`${apiAdminRoute}/onsens/:id`, DeleteOnsenController)
 // Team API
 router.get(`${apiAdminRoute}/teams`, ListTeamsController);
 router.post(`${apiAdminRoute}/teams`, imageUploader.single('avatar'), CreateTeamController);
+router.get(`${apiAdminRoute}/teams/:id`, ShowTeamController);
 router.delete(`${apiAdminRoute}/teams/:id`, DeleteAdminController);
 
 

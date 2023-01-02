@@ -8,7 +8,6 @@ const CreateAdminPage = () => {
   const [isFormLoading, setIsFormLoading] = useState(false);
   const navigate = useNavigate();
 
-
   const onCreateAdminRequest = async (adminData, setErrors) => {
     try {
       setIsFormLoading(true);

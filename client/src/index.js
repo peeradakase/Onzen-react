@@ -16,6 +16,7 @@ import AccountDetailsPage from './pages/AccountDetailsPage';
 import BookingPage from './pages/BookingPage';
 import TeamPage from './pages/TeamPage';
 import CreateAdminPage from './pages/CreateAdminPage';
+import UpdateAdminPage from './pages/UpdateAdminPage';
 
 
 const router = createBrowserRouter([
@@ -68,6 +69,10 @@ const router = createBrowserRouter([
   {
     path: '/admin/teams/create',
     element: <CreateAdminPage />
+  },
+  {
+    path: '/admin/teams/:id',
+    element: <UpdateAdminPage />
   }
 ])
 
