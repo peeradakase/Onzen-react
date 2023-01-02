@@ -4,8 +4,7 @@ import { uploadImagePath } from "../../../../middlewares/uploader.js";
 
 export const UpdateAdminController = async (req, res) => {
   try {
-    console.log(req.body.id, ' :req.body.id');
-    const adminId = parseInt(req.body.id);
+    const adminId = parseInt(req.body.id || req.params.id);
     const { name, email, phoneNumber, role, password } = req.body;
     const adminData = {};
 

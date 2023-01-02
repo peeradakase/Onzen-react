@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import CreateAdminForm from "../components/CreateAdminForm";
+import AdminForm from "../components/AdminForm";
 import { apiUrl, requestHeaderFormData } from "../data/constant";
 
 const CreateAdminPage = () => {
@@ -51,7 +51,8 @@ const CreateAdminPage = () => {
   return (
     <div className="container">
       <h1>Create Admin</h1>
-      <CreateAdminForm
+      <AdminForm
+        mode="create"
         onFormSubmit={onCreateAdminFormSubmit}
         isLoading={isFormLoading}
       />
