@@ -14,6 +14,10 @@ export const ListOrdersController = async (req, res) => {
       orderBy: {
         createdAt: "desc"
       },
+      include: {
+        onzen: true,
+        user: true
+      }
     });
 
     const total = await prismaClient.order.count();

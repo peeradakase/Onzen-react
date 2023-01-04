@@ -23,6 +23,7 @@ import { ListUsersController } from './src/controllers/api/admin/users/index.js'
 import { GetDashboardController } from './src/controllers/api/admin/dashboard/index.js';
 import { CreateOrderController } from './src/controllers/api/admin/order/create.js';
 import { ListOrdersController } from './src/controllers/api/admin/order/index.js';
+import { ShowOrderController } from './src/controllers/api/admin/order/show.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -70,6 +71,7 @@ router.get(`${apiAdminRoute}/dashboard`, GetDashboardController);
 
 // Order API
 router.post(`${apiAdminRoute}/orders`, CreateOrderController);
+router.get(`${apiAdminRoute}/orders/:id`, ShowOrderController);
 router.get(`${apiAdminRoute}/orders`, ListOrdersController);
 
 router.get("*", (req, res) => {
