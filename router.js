@@ -20,6 +20,9 @@ import { UpdateAdminController } from './src/controllers/api/admin/teams/update.
 import { DeleteAdminController } from './src/controllers/api/admin/teams/delete.js';
 import { ShowUserController } from './src/controllers/api/admin/users/show.js';
 import { ListUsersController } from './src/controllers/api/admin/users/index.js';
+import { GetDashboardController } from './src/controllers/api/admin/dashboard/index.js';
+import { CreateOrderController } from './src/controllers/api/admin/order/create.js';
+import { ListOrdersController } from './src/controllers/api/admin/order/index.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -54,7 +57,6 @@ router.get(`${apiAdminRoute}/teams/:id`, ShowTeamController);
 router.delete(`${apiAdminRoute}/teams/:id`, DeleteAdminController);
 router.put(`${apiAdminRoute}/teams/:id`, UpdateAdminController);
 
-
 // Admin Profile API
 router.get(`${apiAdminRoute}/my/profile/:id`, ShowTeamController);
 router.put(`${apiAdminRoute}/my/profile`, imageUploader.single('avatar'), UpdateAdminController);
@@ -62,6 +64,13 @@ router.put(`${apiAdminRoute}/my/profile`, imageUploader.single('avatar'), Update
 // Clients API
 router.get(`${apiAdminRoute}/clients/:id`, ShowUserController);
 router.get(`${apiAdminRoute}/clients`, ListUsersController);
+
+// Dashboard API
+router.get(`${apiAdminRoute}/dashboard`, GetDashboardController);
+
+// Order API
+router.post(`${apiAdminRoute}/orders`, CreateOrderController);
+router.get(`${apiAdminRoute}/orders`, ListOrdersController);
 
 router.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client", "build", "index.html"));
