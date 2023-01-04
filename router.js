@@ -55,7 +55,7 @@ router.get(`${apiAdminRoute}/teams`, ListTeamsController);
 router.post(`${apiAdminRoute}/teams`, imageUploader.single('avatar'), CreateTeamController);
 router.get(`${apiAdminRoute}/teams/:id`, ShowTeamController);
 router.delete(`${apiAdminRoute}/teams/:id`, DeleteAdminController);
-router.put(`${apiAdminRoute}/teams/:id`, UpdateAdminController);
+router.put(`${apiAdminRoute}/teams/:id`,imageUploader.single('avatar'), UpdateAdminController);
 
 // Admin Profile API
 router.get(`${apiAdminRoute}/my/profile/:id`, ShowTeamController);
